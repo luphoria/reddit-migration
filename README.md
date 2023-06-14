@@ -1,6 +1,7 @@
 # reddit-migration
 A simple script to assist leaving reddit whilst making some noise.
-![Image example](./comments.py)
+
+![Image example](./comments.png)
 
 ## To use
 TODO: set up posts.
