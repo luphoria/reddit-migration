@@ -1,10 +1,12 @@
 import praw
+from dotenv import dotenv_values
 
-client_id = '<CLIENT_ID>'
-client_secret = '<CLIENT_SECRET>'
-user_agent = '<USER_AGENT>'
-username = '<USERNAME>'
-password = '<PASSWORD>'
+env = dotenv_values()
+client_id = env["CLIENT_ID"]
+client_secret = env["CLIENT_SECRET"]
+user_agent = env["USER_AGENT"]
+username = env["USERNAME"]
+password = env["PASSWORD"]
 
 reddit = praw.Reddit(
     client_id=client_id,
@@ -14,10 +16,8 @@ reddit = praw.Reddit(
     password=password
 )
 
-new_comment_text = "Goodbye reddit"
-
 for comment in reddit.user.me().comments.new(limit=None):
-    comment.edit(new_comment_text)
+    comment.edit(env["TEXT"])
     print(f"Comment edited: {comment.id}")
 
 print("All comments edited.")

@@ -4,8 +4,6 @@ A simple script to assist leaving reddit whilst making some noise.
 ![Image example](./comments.png)
 
 ## To use
-TODO: set up posts.
-
 - Install `praw` (it's in requirements.txt).
 - Enter comments.py in your preferred text editor, and (set your client (app) ID and secret, user agent, username, and password.](https://rymur.github.io/setup)
 - Additionally, edit `new_comment_text` to be whatever message you'd like. For example, my leaving message was: `[I'm leaving reddit due to changes in API costs. fuck /u/spez.](https://www.theverge.com/2023/6/10/23756476/reddit-protest-api-changes-apollo-third-party-apps) // [https://kbin.pub](https://kbin.pub)` 
