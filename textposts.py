@@ -17,7 +17,7 @@ reddit = praw.Reddit(
 )
 
 for post in reddit.user.me().submissions.new(limit=None):
-    if isinstance(post, praw.models.Submission) and not post.is_self:
+    if isinstance(post, praw.models.Submission) and post.is_self:
         try:
             post.edit(env["TEXT"])
             print(f"Post edited: {post.id}")
